@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>데이터타입 (String, Number, Object, Array, Undefined, Null)</title>
+  </head>
+  <body>
+    <!-- <input type="button" value="로그인" /> -->
+    <script>
+      let name1 = "박성한";
+      let name2 = "임성진";
+      let str1 = "나의 이름은 박성한입니다.";
+      console.log(str1);
+
+      let str2 = '나의 이름은 "임성진" 입니다.'; // \를 해주면 그대로 출력된다.
+      console.log(str2);
+
+      let str3 = "나의 이름은 \\한선수\\ 입니다.";
+      console.log(str3);
+
+      // Number : 숫자
+      let x1 = 2;
+      let y1 = 8.25;
+
+      // Undefined
+      let u1;
+      console.log(u1);
+
+      let u2 = undefined;
+      console.log(u2);
+
+      // Null
+      let n1 = null;
+      console.log(n1); // 출력값 : null
+      console.log(n1 + 2); // 출력값 : 2
+
+      // Object : JAVA에서 Class
+      // Object : JavaScript - 선언 후 멤버변수 초기화
+      let person1 = {}; // Object 선언
+      person1.firstName = "성한"; // 멤버변수 초기화
+      person1.lastName = "박";
+      person1.age = 25;
+
+      // Object 선언과 동시에 초기화
+      let person2 = {
+        firstName: "선수",
+        lastName: "한",
+        age: 39,
+      };
+
+      let person3 = {};
+      person3["firstName"] = "성진";
+      person3["lastName"] = "임";
+      person3["age"] = 24;
+
+      console.log(person1.firstName);
+      console.log(person1.lastName);
+      console.log(person1.age);
+
+      person2.email = "sunsu@gmail.com";
+      console.log(person2.firstName);
+      console.log(person2.lastName);
+      console.log(person2.age);
+      console.log(person2.email);
+
+      document.write(person3.firstName + "<br>");
+      document.write(person3.lastName + "<br>");
+      document.write(person3.age + "<br>");
+
+      // Array : 배열
+      let vallyball = [
+        "대한항공 점보스",
+        "한국전력 빅스톰",
+        "KGC인삼공사",
+        "IBK기업은행 알토스",
+        "흥국생명 핑크스파이더스",
+      ];
+      console.log(vallyball[0]);
+      console.log(vallyball[1]);
+      console.log(vallyball[2]);
+      console.log(vallyball[3]);
+      console.log(vallyball[4]);
+
+      let num = [2, 7, 9, 13, 14, 20];
+      console.log(num[1]);
+      console.log(num[3]);
+
+      // 문자와 숫자를 혼합해서 사용할 수 있음
+      let arr1 = ["임성진", 9, 14, undefined, null];
+      console.log(arr1[0]);
+      console.log(arr1[1]);
+      console.log(arr1[2]);
+      console.log(arr1[3]);
+      console.log(arr1[4]);
+
+      let arr2 = [person1, person2, person3];
+      console.log(arr2[0]);
+      console.log(arr2[1]);
+      console.log(arr2[2]);
+
+      // 배열안에 바로 선언안해도 됨
+      let arr3 = [];
+      arr3[0] = 2;
+      arr3[1] = "박성한";
+      console.log(arr3[0]);
+      console.log(arr3[1]);
+
+      arr3[2] = "SSG 랜더스의 박성한";
+      console.log(arr3[2]);
+
+      let arr4 = [];
+      arr4.push("7명");
+      arr4.push("NCT DREAM");
+      arr4.push("지성");
+      arr4.push("엔드림");
+
+      console.log(arr4);
+      for (var i = 0; i < arr4.length; i++) {
+        console.log(arr4[i]);
+        document.write(arr4[i] + "<br>");
+      }
+
+      // Boolean 참/거짓 : True or False
+      let isAdult = true; // isAdult = false;
+      let num1 = 2;
+      let num2 = 9;
+      console.log(num1 > num2);
+
+      console.log(typeof num1);
+      console.log(typeof name1);
+      console.log(typeof isAdult);
+      console.log(typeof person1);
+      console.log(typeof vallyball); // JavaScript에서 배열은 Object로 받아들임
+    </script>
+  </body>
+</html>

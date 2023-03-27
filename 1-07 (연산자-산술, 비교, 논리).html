@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <title>연산자 - 산술, 비교, 논리</title>
+  </head>
+  <body>
+    <script>
+      // 더하기
+      var x1 = 2;
+      var y1 = 9;
+      var z1 = x1 + y1;
+      console.log(z1);
+
+      // 빼기
+      var x2 = 9;
+      var y2 = 2;
+      var z2 = x2 - y2;
+      console.log(z2);
+
+      // 곱하기
+      var x3 = 2;
+      var y3 = 7;
+      var z3 = x3 * y3;
+      console.log(z3);
+
+      // 나누기
+      var x4 = 2;
+      var y4 = 9;
+      var z4 = x4 / y4;
+      console.log(z4);
+
+      // 거듭제곱
+      var x5 = 7;
+      var y5 = 9;
+      var z5 = x5 ** y5; // 7의 9승
+      console.log(z5);
+
+      // 나머지
+      var x6 = 7;
+      var y6 = 9;
+      var z6 = x6 % y6;
+      console.log(z6);
+
+      // 증가연산자
+      var x7 = 4;
+      x7++;
+      console.log(x7); // x = x + 1; x += 1;
+      x7++;
+      console.log(x7);
+
+      // 감소연산자
+      var x8 = 7;
+      x8--; // x = x - 1; x -= 1;
+      console.log(x8);
+      x8--;
+      console.log(x8);
+
+      var x9 = 2;
+      var y9 = 2;
+
+      x9 += y9;
+      console.log(x9);
+
+      x9 -= y9;
+      console.log(x9);
+      console.log(y9);
+
+      x9 *= y9;
+      console.log(x9);
+      console.log(y9);
+
+      x9 /= y9;
+      console.log(x9);
+      console.log(y9);
+
+      // 문자열 연산자
+      var txt1 = "NCT DREAM";
+      var txt2 = "지성(JISUNG)";
+      var txt3 = txt1 + " " + txt2;
+      console.log(txt3);
+
+      txt1 += txt2; // txt1 = txt1 + txt2;
+      console.log(txt1);
+
+      // 숫자와 문자
+      var x = 2 + 9;
+      console.log(x); // 출력값 : 11;
+
+      var x = "2" + 9;
+      console.log(x); // 출력값 : 29
+
+      // 비교연산자
+      console.log(1 == 1); // 출력값 : true
+      console.log(1 == "1"); // 출력값 : true → 실제로 " "안에 있는 값을 비교
+      console.log(1 === "1"); // 출력값 : false → === 값 and type 둘 다 비교
+
+      console.log(2 != 9); // 출력값 : true
+      console.log(7 != "7"); // 출력값 : false
+      console.log(2 !== "2"); // 출력값 : true
+
+      console.log(9 > 7); // 출력값 : true
+      // 비교연산자는 연산을 수행하는 값은 boolean 타입이다.
+      console.log(7 > 9); // 출력값 : false
+      console.log(9 >= 7); // 출력값 : true
+      console.log(9 <= 7); // 출력값 : false
+
+      // 논리연산자 : &, |, !
+      console.log(2 > 9 && 7 > 9); // 출력값 : false
+      console.log(2 < 9 || 7 > 9); // 출력값 : true
+      console.log(!(9 < 7)); // 출력값 : true
+    </script>
+  </body>
+</html>

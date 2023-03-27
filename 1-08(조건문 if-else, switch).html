@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>조건문 (if - else, switch)</title>
+  </head>
+  <body>
+    <script>
+      var age = 25;
+
+      // if
+      if (age > 18) {
+        console.log("당신은 성인입니다.");
+      }
+
+      // if - else if
+      if (age > 18) {
+        console.log("당신은 성인입니다.");
+      } else {
+        console.log("당인은 청소년입니다.");
+      }
+
+      // if - else if - else
+      var hour = 26;
+      if (hour < 10) {
+        console.log("GOOD MORNING");
+      } else if (hour < 17) {
+        console.log("GOOD AFTERNOON");
+      } else if (hour < 21) {
+        console.log("GOOD EVENING");
+      } else {
+        console.log("GOOD NIGHT");
+      }
+
+      var age = 26;
+      var isAdult = false;
+
+      if (age > 18) {
+        isAdult = true;
+      } else {
+        isAdult = false;
+      }
+      console.log(isAdult);
+
+      // switch - case : 정수, break, default
+      var d = new Date();
+      var day = d.getDay; // 일요일 : 0, 월요일 : 1, 화요일 : 2, 수요일 : 3, 목요일 : 4, 금요일 : 5, 토요일 : 6
+      console.log(day);
+      var dayName = " ";
+
+      switch (day) {
+        case 0:
+          dayName = "일요일";
+          break;
+        case 1:
+          dayName = "월요일";
+          break;
+        case 2:
+          dayName = "화요일";
+          break;
+        case 3:
+          dayName = "수요일";
+          break;
+        case 4:
+          dayName = "목요일";
+          break;
+        case 5:
+          dayName = "금요일";
+          break;
+        case 6:
+          dayName = "토요일";
+          break;
+        default:
+          break;
+      }
+
+      console.log("오늘은 " + dayName + " 입니다.");
+
+      // switch문을 if문으로 변환
+    </script>
+  </body>
+</html>
