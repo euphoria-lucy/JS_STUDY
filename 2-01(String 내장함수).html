@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <title>String 내장함수</title>
+  </head>
+  <body>
+    <script>
+      var txt = "NCTDREAM";
+      console.log(txt.length);
+
+      // index of
+      var str = "SSG LANDERS AND KEPCO VIXTROM";
+      console.log(str.indexOf("AND"));
+      console.log(str.indexOf("SUNGJIN")); // 출력값 → -1 리턴
+      if (str.indexOf("AND") > -1) {
+        console.log("AND 문자 발견");
+      }
+      console.log(str.lastIndexOf("LANDERS"));
+
+      // search
+      var str = "JISUNG OF NCT DREAM";
+      console.log(str.search("JISUNG"));
+
+      // slice
+      var str = "PARKJISUNG, LIMSUNGJIN, PARKSUNGHAN";
+      console.log(str.slice(7, 9)); // 출력값 : UN
+      console.log(str.slice(2)); // 출력값 → RKJISUNG, LIMSUNGJIN, PARKSUNGHAN
+
+      // substring
+      var str = "PARKJISUNG, LIMSUNGJIN, PARKSUNGHAN";
+      console.log(str.substring(2, 9));
+
+      // substr
+      console.log(str.substr(9, 7));
+
+      var jumin = "990111";
+      console.log(jumin.substr(0, 2));
+      console.log(jumin.substr(2, 2));
+      console.log(jumin.substr(4, 2));
+      console.log(jumin.substr(0, 7));
+
+      var juminn = "1998 - 03 - 30";
+      juminn.substring(0, juminn.indexOf(" - "));
+
+      // replace
+      var str = "SSG LANDERS OR KEPCO VIXTROM";
+      var str1 = str.replace("OR", "AND");
+      console.log(str1);
+
+      var str2 = "SSG LANDERS OR OR KEPCO VIXTROM";
+      var str3 = str2.replace("OR", "AND");
+      console.log(str3);
+
+      var str4 = "SSG LANDERS OR OR OR KEPCO VIXTROM";
+      var str5 = str4.replace(/OR/g, "AND"); // g : global (=전체)을 의미
+      console.log(str5);
+
+      var str6 = "SSG LANDERS Or oR KEPCO VIXTROM";
+      var str7 = str6.replace(/OR/gi, "AND"); // i : ignore 대소문자를 무시
+      console.log(str7);
+
+      // toUpperCase : 모두 대문자로
+      var str8 = "SSG LANDERS Or KEPCO VIXTROM";
+      console.log(str8.toUpperCase());
+
+      // toLowerCase : 모두 소문자로
+      var str9 = "SSG LANDERS Or KEPCO VIXTROM";
+      console.log(str9.toLowerCase());
+
+      // concat
+      var txt1 = "LIM";
+      var txt2 = "SUNGJIN";
+      var txt3 = txt1 + " " + txt2;
+      console.log(txt3);
+      console.log(txt1.concat(txt2));
+      console.log(txt1.concat(" ", txt2));
+
+      // trim
+      var str10 = "       ♥ ★ ♣       PARK JISUNG       ♣ ★ ♥       ";
+      console.log(str10);
+      console.log(str10.trim());
+
+      // padStart
+      var str11 = "279";
+      console.log(str11.padStart(9, 7));
+
+      // 특정 자릿수를 통일하기 위해서 사용 : ex) 날짜를 두자릿수로 통일
+      var str12 = "2";
+      console.log(str12.padStart(2, 0));
+
+      // padEnd
+      var str13 = "29";
+      console.log(str13.padEnd(7, 0));
+
+      // charAt
+      var str13 = "PARK JISUNG";
+      console.log(str13.charAt(7));
+
+      // split
+      var tags = "CD, SMINI, 정규앨범, 미니앨범";
+      var arr1 = tags.split(",");
+      console.log(arr1);
+
+      var birthday = "2002-02-05";
+      var arr2 = birthday.split("-");
+      console.log(arr2);
+    </script>
+  </body>
+</html>
