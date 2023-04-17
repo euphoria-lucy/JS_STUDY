@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Number 내장객체</title>
+  </head>
+  <body>
+    <script>
+      // toString()
+      var x1 = 990111;
+      console.log(x1);
+      console.log(x1 + 9);
+      console.log(x1.toString() + 9);
+
+      // toFixed() : 지정된 소수점 자릿수까지 반올림으로 표시
+      var x2 = 19990111 - 14;
+      console.log(x2.toFixed(2)); // 의미 → 소수점 셋째자리에서 반올림, 출력값 : 19990097.00
+
+      // toPrecision()
+      var x3 = 99.0111;
+      console.log(x3.toPrecision(2)); // 출력값 : 99
+
+      var x4 = Number("9"); // 문자열 → 숫자
+      console.log(x4); // 출력값 : 9
+
+      var x5 = Number(true);
+      console.log(x5); // 출력값 : 1
+
+      console.log(Number("         9         ")); // 출력값 : 9, 공백 제거 후 숫자로 변환
+      console.log(Number("         9")); // 출력값 : 9, 공백 제거 후 숫자로 변환
+      console.log(Number("990111.9")); // 출력값 : 990111.9, 공백 제거 후 숫자로 변환
+      console.log(Number("990111,9")); // 출력값 : (NaN) Not a Number
+      console.log(Number("LIMSUNGJIN")); // 출력값 : (NaN) Not a Number
+      console.log(Number("990111 9")); // 출력값 : (NaN) Not a Number
+
+      // parseInt()
+      console.log(parseInt("9")); // 출력값 : 9
+      console.log(parseInt("9.14")); // 출력값 : 9
+      console.log(parseInt("99 9 14")); // 출력값 : 99
+
+      // parseFloat()
+      console.log(parseFloat("9")); // 출력값 : 9
+      console.log(parseFloat("9.14")); // 출력값 : 9.14
+      console.log(parseFloat("9.14 sj")); // 출력값 : 9.14
+    </script>
+  </body>
+</html>
