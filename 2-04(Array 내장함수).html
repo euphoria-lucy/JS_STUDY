@@ -79,11 +79,11 @@
 
       var points = [9, 14, 99, 11, 1];
       /* console.log(
-         points.sort(function (a, b) {
-          if (a > b) return 1; // -1로 바꾸면 내림차순 정렬
-          else if (a <script b) return -1; // 1로 바꾸면 내림차순 정렬
+          points.sort(function (a, b) {
+           if (a > b) return 1; // -1로 바꾸면 내림차순 정렬
+           else if (a <script b) return -1; // 1로 바꾸면 내림차순 정렬
           else return 0;
-        })); // sort() : 아이템을 문자열로 비교해서 정렬함 */
+         })); // sort() : 아이템을 문자열로 비교해서 정렬함 */
 
       console.log(
         points.sort(function (s, j) {
@@ -107,12 +107,80 @@
         if (s.point > h.point) return 1;
         else if (s.point < h.point) return -1;
         else 0;
-      });*/
+       }); */
 
       // 삼항연산자
       baseball.sort(function (b, l) {
         return b.point > l.point ? 1 : b.point < l.point ? -1 : 0;
       });
+
+      // filter( ) : 조건에 맞는 배열만 리턴
+      var pass = baseball.filter(function (base) {
+        return base.point > 10;
+      });
+      console.log(pass);
+
+      var baseball = [
+        { name: "박성한", point: 25, team: "ssg" },
+        { name: "최지훈", point: 26, team: "ssg" },
+        { name: "이정후", point: 25, team: "키움" },
+        { name: "김도영", point: 24, team: "kia" },
+      ];
+
+      var ssg = baseball.filter(function (baseb) {
+        return baseb.team === "ssg";
+      });
+      console.log(ssg);
+
+      // filter( ) → for문으로 구현
+      var kia = [];
+      for (var i = 0; i < baseball.length; i++) {
+        if (baseball[i].team === "kia") {
+          kia.push(baseball[i]);
+        }
+      }
+      console.log(kia);
+
+      // reduce
+      var arr3 = [2, 7, 9, 5, 51];
+      var total = 0;
+      for (var i of arr3) {
+        total += i;
+      }
+      console.log(total);
+
+      // reduce (l, s)
+      // l : accumulator (누산기)
+      // s : currentValue
+      var arr4 = [2, 7, 9, 5, 51];
+      var total = arr4.reduce(function (a, c) {
+        return a + c;
+      });
+      console.log(total);
+
+      // map - filter( )와 다른 형태로 새로운 배열을 생성
+      var userList = [
+        {
+          firstName: "성진",
+          lastName: "임",
+          email: "LimSungJin@kepcovixtorm.com",
+        },
+        {
+          firstName: "성한",
+          lastName: "박",
+          email: "PARKSUNGHAN@ssglanders.com",
+        },
+        { firstName: "지성", lastName: "박", email: "PARKJISUNG@nctdream.com" },
+        {
+          firstName: "한용",
+          lastName: "정",
+          email: "JUNGHANYOUNG@koreanairjumbos.com",
+        },
+      ];
+      var userList2 = userList.map(function (user) {
+        return { fullName: user.lastName + user.firstName };
+      });
+      console.log(userList2);
     </script>
   </body>
 </html>

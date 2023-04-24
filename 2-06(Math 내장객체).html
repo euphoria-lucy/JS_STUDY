@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Math 내장객체</title>
+  </head>
+  <body>
+    <script>
+      // Math : 수학
+      // round() : 반올림
+      console.log(Math.round(1.11)); // 출력값 : 1
+      console.log(Math.round(3.3)); // 출력값 : 3
+
+      // ceil() : 무조건 올림
+      console.log(Math.ceil(1.11)); // 출력값 : 2
+      console.log(Math.ceil(2.5)); // 출력값 : 3
+      console.log(Math.ceil(3.3)); // 출력값 : 4
+
+      // 게시판에 총 글이 77건
+      // 1 페이지에 보여주는 건수는 10개라고 한다면
+      // [1], [2], [3], [4], [5], [6], [7], [8]
+      console.log(Math.ceil(77 / 10));
+
+      // 1페이지에 보여주는 건수를 15개로 수정한다면
+      console.log(Math.ceil(77 / 15));
+
+      // floor() : 무조건 내림
+      console.log(Math.floor(1.11)); // 출력값 : 1
+      console.log(Math.floor(2.5)); // 출력값 : 2
+      console.log(Math.floor(-3.3)); // 출력값 : -4
+
+      // trunc() : 정수만 리턴
+      console.log(Math.trunc(1.11)); // 출력값 : 1
+      console.log(Math.trunc(2.5)); // 출력값 : 2
+      console.log(Math.floor(-3.3)); // 출력값 : -4
+
+      // sign() : 음수 → -1, 양수 → 1, 0 : 0
+      console.log(Math.sign(-7)); // 출력값 : -1
+      console.log(Math.sign(2)); // 출력값 : 1
+      console.log(Math.sign(0)); // 출력값 : 0
+
+      // pow() : 제곱
+      console.log(Math.pow(2, 2)); // 출력값 : 2의 2승 → 4
+
+      // sqrt() : 제곱근
+      console.log(Math.sqrt(49)); // 출력값 : 7
+
+      // abs() : 절대값
+      console.log(Math.abs(2.7)); // 출력값 : 2.7
+      console.log(Math.abs(-2.7)); // 출력값 : 2.7
+
+      // max(), min()
+      console.log(Math.max(2, 7, 5, 51, 14, 29)); // 출력값 : 51
+      console.log(Math.min(2, 7, 5, 51, 14, 29)); // 출력값 : 2
+
+      // random() :
+    </script>
+  </body>
+</html>
