@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>CHROME 개발자도구</title>
+  </head>
+  <body>
+    <script>
+      console.log("말랑콩떡 김정민"); // 출력
+      console.info("말랑콩떡 김정민"); // 정보
+      console.warn("말랑콩떡 김정민"); // 경고
+      console.error("말랑콩떡 김정민"); // 에러
+
+      var userList = [
+        {
+          FIRSTNAME: "정민",
+          LASTNAME: "김",
+          EMAIL: "kimjungmin@ssglanders.com",
+        },
+        {
+          FIRSTNAME: "성한",
+          LASTNAME: "박",
+          EMAIL: "parksunghan@ssglanders.com",
+        },
+        {
+          FIRSTNAME: "성진",
+          LASTNAME: "임",
+          EMAIL: "limsungjin@kepcovixtorm.com",
+        },
+        {
+          FIRSTNAME: "영진",
+          LASTNAME: "송",
+          EMAIL: "songyoungjin@ssglanders.com",
+        },
+      ];
+      console.log(userList);
+      console.table(userList);
+
+      console.time();
+
+      for (let x = 1; x <= 100000; x++) {
+        console.log(x);
+      }
+
+      console.timeEnd();
+
+      function test() {
+        console.time();
+
+        console.timeEnd();
+      }
+
+      // 출력값에 style을 직접 지정할 수 있음
+      console.log("%c말랑콩떡 김정민", "color:pink;");
+    </script>
+  </body>
+</html>

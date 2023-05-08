@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Window 내장객체</title>
+  </head>
+  <body>
+    <script>
+      console.log(window);
+      window.alert("이것은 대화창 입니다");
+      alert("이것은 대화창 입니다."); // window는 생략가능
+
+      var yn = confirm("정말로 삭제하시겠습니까?");
+      console.log(yn);
+
+      if (confirm("정말로 삭제하시겠습니까?")) {
+        // 삭제 로직 실행
+        console.log("삭제 실행");
+      }
+
+      var passwd = prompt("랜더스 김정민의 생일을 알려줘");
+      console.log(passwd);
+      if (passwd === null) {
+        console.log("취소 선택");
+      } else if (passwd === "") {
+        console.log("확인 선택");
+      } else if (passwd !== "") {
+        console.log(passwd);
+      }
+
+      window.open("https://naver.com");
+
+      window.print();
+
+      // setTimeout
+      setTimeout(function () {
+        alert("아기짐승 김정민");
+        console.log("3초 후에 프로그램이 실행됩니다");
+      }, 3000);
+
+      // setInterval
+      var i = 0;
+      setInterval(function () {
+        console.log("말랑콩떡 김정민 " + i);
+        i++;
+      }, 1000);
+
+      var i = 0;
+      var fnc = setInterval(function () {
+        console.log("말랑콩떡 김정민 " + i);
+        if (i === 11) {
+          clearInterval(fnc);
+        }
+        i++;
+      }, 1000);
+    </script>
+  </body>
+</html>
