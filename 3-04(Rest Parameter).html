@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Rest Parameter</title>
+  </head>
+  <body>
+    <script>
+      function sum_o(num_o, num_t) {
+        var plus = num_o + num_t;
+        console.log(plus);
+      }
+      sum_o(65, 51);
+
+      function sum_two(num_o, num_t, num_thr) {
+        var plus = num_o + num_t + num_thr;
+        console.log(plus);
+      }
+      sum_two(65, 51, 37);
+
+      function sum_thr(num_o, num_t, num_thr, num_four) {
+        var plus = num_o + num_t + num_thr + num_four;
+        console.log(plus);
+      }
+      sum_thr(65, 51, 37, 4);
+
+      // Rest Parameter
+      function sum_four(...args) {
+        // 변수명은 상관없음. 매개변수를 배열로 받음
+        var total = 0;
+        for (var x of args) {
+          // console.log(x);
+          total += x;
+          console.log(total);
+        }
+      }
+      sum_four(65);
+      sum_four(51, 65);
+      sum_four(37, 51, 65);
+    </script>
+  </body>
+</html>
