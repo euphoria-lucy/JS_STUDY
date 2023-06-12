@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Default Function Parameter</title>
+  </head>
+  <body>
+    <script>
+      function say_one(message) {
+        console.log(message);
+      }
+
+      say_one("아기짐승");
+      say_one("");
+
+      function say_two(message) {
+        if (message != undefined) {
+          console.log(message);
+        } else {
+          console.log("매개변수가 없음");
+        }
+      } // say_two
+      say_two("말랑콩떡 김정민");
+      say_two("");
+
+      function plus_one(num_o, num_t) {
+        console.log(num_o + num_t);
+      }
+      plus_one(65, 51);
+      plus_one(2);
+
+      function plus_two(num_thr = 0, num_four = 0) {
+        console.log(num_thr + num_four);
+      }
+      plus_two(51, 65);
+      plus_two(2);
+      plus_two();
+
+      function say_three(message = "매개변수가 없음") {
+        console.log(message);
+      }
+      say_three("아기짐승");
+      say_three();
+    </script>
+  </body>
+</html>
