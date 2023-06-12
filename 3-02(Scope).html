@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Scope</title>
+  </head>
+  <body>
+    <script>
+      function myFunction() {
+        var iphone14_promax = "아이폰14 프로맥스";
+        console.log(iphone14_promax);
+      }
+      myFunction();
+      // console.log(iphone14_promax); // 출력 → ReferenceError: iphone14_promax is not defined
+
+      // global Scope : 전역 변수
+      var iphone14_pro = "아이폰14 프로";
+      function myFunction_two() {
+        console.log(iphone14_pro);
+      }
+      myFunction_two(); // 함수는 미리 컴파일을 함!! 따라서 문장을 함수선언 위로 올려도 실행가능
+
+      var myFunction_thr = function () {
+        console.log("myFunction_thr 호출");
+      };
+      myFunction_thr(); // 변수는 미리 컴파일을 하지 않음!! 따라서 문장을 함수선언 위로 올리면 실행불가. 에러발생
+    </script>
+  </body>
+</html>
