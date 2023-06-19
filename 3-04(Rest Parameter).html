@@ -35,6 +35,19 @@
       sum_four(65);
       sum_four(51, 65);
       sum_four(37, 51, 65);
+
+      // ForEach문
+      function sum_five(...args) {
+        var total = 0;
+        args.forEach(function (x, i) {
+          // console.log(x, i);
+          total += x;
+        });
+        console.log(total);
+      }
+      // sum_five(65);
+      // sum_five(51, 65);
+      sum_five(6, 32, 37, 51, 65);
     </script>
   </body>
 </html>
