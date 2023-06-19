@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      function hello_o() {
+        console.log("KIM JUNG MIN");
+      }
+      hello_o();
+
+      var hello_two = function () {
+        console.log("PARK SEONG HAN");
+      };
+      hello_two();
+
+      // arrow function
+      var hello_thr = () => {
+        console.log("RYU HYUN GON");
+        return "RYU HYUN GON";
+      };
+      var str = hello_thr();
+      console.log(str);
+
+      var hello_four = () => "LIM SUNG JIN";
+
+      // 위의 hello_four와 동일
+      // var hello_four = function() {
+      //   return "LIM SUNG JIN";
+      // }
+
+      // arrow function
+      // 함수 호출시 매개변수를 전달하는 경우
+      // var hello_five = (fullName) => "HELLO" + " " + fullName;
+      // var hello_five = function (fullName) {
+      //   return "HELLO" + " " + fullName;
+      // };
+      // console.log(hello_five("김정민"));
+
+      // 매개변수가 하나일 경우에는 () 생략 가능
+      // var hello_five = fullName => "HELLO" + " " + fullName;
+      // console.log(hello_five("김정민"));
+
+      var hello_six = (fullName, lastName) =>
+        "Hello" + " " + fullName + " " + lastName;
+      console.log(hello_six("현곤", "류"));
+    </script>
+  </body>
+</html>
