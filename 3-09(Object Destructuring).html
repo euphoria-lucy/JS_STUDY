@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Object Destructuring</title>
+  </head>
+  <body>
+    <script>
+      function getPerson() {
+        return {
+          firstName: "정민",
+          lastName: "김",
+          age: 19,
+          email: "kimjungmin@ssglanders.com",
+          city: "Busan",
+          countgry: "Chosun",
+        };
+      }
+
+      var person = getPerson();
+
+      console.log(person);
+      console.log(person.firstName);
+      console.log(person.lastName);
+
+      var { firstName, lastName } = getPerson();
+
+      console.log(firstName);
+    </script>
+  </body>
+</html>
