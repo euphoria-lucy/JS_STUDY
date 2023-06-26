@@ -22,9 +22,28 @@
 
         // 방법3 : arrow function 이용
         let sum = arr.reduce((a, b) => a + b);
+
+        for (let i = 0; i < 8; i++) {
+          for (let j = 1; j < 9; j++) {
+            if (sum - (arr[i] + arr[j]) === 100) {
+              // i를 먼저 삭제하면, 뒷쪽 항목이 당겨지므로 다른값이 지워짐
+              // arr.splice(i, 1);
+              // arr.splice(j, 1);
+              arr.splice(j, 1);
+              arr.splice(i, 1);
+            } // if
+          } // for j
+        } // for i
+
+        return answer;
       }
       let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
       console.log(solution(arr));
+
+      // splice() 사용법 : 배열에 새로운 항목을 추가 및 삭제
+      // let fruits = ["Banana", "Orange", "Apple"];
+      // fruits.splice(1, 2);
+      // console.log(fruits);
     </script>
   </body>
 </html>
