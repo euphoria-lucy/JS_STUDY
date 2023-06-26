@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Spred Operator</title>
+  </head>
+  <body>
+    <script>
+      var arr_one = [2, 51, 65];
+      var arr_two = [3, 4, 7];
+      var arr_thr = arr_one.concat(arr_two);
+
+      console.log(arr_one);
+      console.log(arr_two);
+      console.log(arr_thr);
+
+      // Spred Operator : 분해 기능
+      var arr_four = [2, 51, 65];
+      var arr_five = [4, 3, 7, ...arr_four];
+      var arr_six = [4, 3, ...arr_four, 7];
+
+      console.log(arr_five);
+      console.log(arr_six);
+
+      var arr_seven = [2, 65, 67];
+      var arr_eight = [4, 3, 7];
+      var arr_nine = [...arr_seven, ...arr_eight];
+
+      console.log(arr_nine);
+
+      var cd = "CD";
+      var alphabet = ["A", "B", ...cd];
+
+      console.log(alphabet);
+    </script>
+  </body>
+</html>
