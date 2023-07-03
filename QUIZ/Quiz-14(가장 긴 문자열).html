@@ -6,9 +6,13 @@
     <script>
       function solution(str) {
         let answer = " ";
+        let max = Number.MIN_SAFE_INTEGER;
 
-        let len = 0;
         for (let x of str) {
+          if (x.length > max) {
+            max = x.length;
+            answer = x;
+          }
         }
 
         return answer;
@@ -21,6 +25,7 @@
         "kimminjun",
       ];
       console.log(solution(str));
+      // console.log(Number.MIN_SAFE_INTEGER);
     </script>
   </body>
 </html>
