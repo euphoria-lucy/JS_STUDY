@@ -56,6 +56,19 @@
               answer += "D" + " ";
               break;
           } // switch
+
+          // 방법 4 : 난이도 최상
+          switch ((a[i] - b[i] + 3) % 3) {
+            case 1:
+              answer += "A" + " ";
+              break;
+            case 2:
+              answer += "B" + " ";
+              break;
+            case 0:
+              answer += "D" + " ";
+              break;
+          } // switch
         } // for
 
         // for (let i = 0; i < a.length; i++) {
