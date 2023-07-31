@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>격자판 최대합</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        let answer = Number.MIN_SAFE_INTEGER;
+        let n = arr.length; // n = 5
+        let sum_one = 0; // 행의 합
+        let sum_two = 0; // 열의 합
+
+        for (let i = 0; i < n; i++) {
+          // i = 0, 1, 2, 3, 4
+          sum_one = 0;
+          sum_two = 0;
+          for (let j = 0; j < n; j++) {
+            // console.log(i, j);
+            sum_one += arr[i][j];
+            sum_two += arr[j][i];
+          }
+          answer = Math.max(answer, sum_one, sum_two);
+        }
+
+        // console.log(answer);
+
+        // 대각선의 합 구하기
+        sum_one = sum_two = 0;
+        for (let i = 0; i < n; i++) {
+          sum_one += arr[i][i];
+          sum_two += arr[i][n - i - 1];
+        } // for
+        answer = Math.max(answer, sum_one, sum_two); // 대각선까지 포함한 최대값 출력
+
+        return answer;
+      }
+
+      var arr = [
+        [10, 13, 10, 12, 15],
+        [12, 39, 30, 23, 11],
+        [11, 25, 50, 53, 15],
+        [19, 27, 29, 37, 27],
+        [19, 13, 30, 13, 19],
+      ];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
