@@ -71,6 +71,27 @@
 
       // https://www.w3schools.com
       // javascript - JS RegExp
+
+      // 우편번호 검색
+      var patt_eleven = /\d{5}/;
+      var postalCode = "KJM65137";
+      console.log(patt_eleven.test(postalCode));
+
+      var patt_twelve = /^\d{5}$/; // ^: ^ 다음 문자로 시작
+      var postalCode_two = "KJM65137";
+      var postalCode_thr = "65137";
+      console.log(patt_twelve.test(postalCode_thr));
+
+      // 핸드폰 번호 유효성 체크
+      // 010-2004-0307
+      var patt_thirteen = /^(010)-\d{4}-\d{4}/;
+      var tel = "010-2004-0307";
+      console.log(patt_thirteen.test(tel));
+
+      // 이메일주소 : kimjeongmin@ssglanders.com
+      var patt_fourteen = /^\w+([\.-]?\w+)*@\w+(\.\w{2,3})+$/;
+      var email = "kimjeongmin@ssglanders.com";
+      console.log(patt_fourteen.test(email));
     </script>
   </body>
 </html>
