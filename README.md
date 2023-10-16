@@ -5,5 +5,5 @@
 - YEAR : 2023
 
 ### <img src = "https://cdn-icons-png.flaticon.com/128/4341/4341102.png" width = "30" height = "30"> DEVELOPMENT ENVIRONMENT
-- DEVELOP LANGUAGE :  ` JAVA SCRIPT `
+- DEVELOP LANGUAGE :  ` JAVASCRIPT `
 - DEVELOP TOOL : ` VISUAL STUDIO CODE ` 
