@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>K번째 큰 수</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, k, card) {
+        let answer = 0;
+        let temp = new Set();
+        let cnt = 0;
+
+        for (let i = 0; i < n - 2; i++) {
+          for (let j = i + 1; j < n - 1; j++) {
+            for (let l = j + 1; l < n; l++) {
+              // console.log(i, j, l);
+              // cnt++;
+              temp.add(card[i] + card[j] + card[l]);
+            } // for l
+          } // for j
+        } // for i
+
+        let a = Array.from(temp).sort((a, b) => b - a);
+        // console.log(a);
+        answer = a[k - 1];
+
+        // console.log(temp);
+        // console.log(cnt);
+        return answer;
+      }
+      let arr = [13, 15, 34, 23, 45, 65, 33, 11, 26, 42];
+      console.log(solution(10, 3, arr));
+    </script>
+  </body>
+</html>
